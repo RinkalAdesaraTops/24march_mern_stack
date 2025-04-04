@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "Hi hello how are hi you hi?"
+        document.write('<br> length is '+str.length)
+        document.write('<br> Uppercase is '+str.toUpperCase())
+        document.write('<br> Lowercase is '+str.toLowerCase())
+        let str2 = str.concat(" TEST"," djggiur","uytt")
+        document.write('<br> Merge is '+str2)
+        str2 = str.slice(4,8)
+        document.write('<br> Slice is '+str2)
+        str2 = str.substr(4,8)
+        document.write('<br> Substr is '+str2)
+        // str2 = str.replace("hI","By") 
+        str2 = str.replace(/hi/gi,"By") 
+        //case sensitive  at a time single word replace
+        document.write('<br> Replace is '+str2)
+        str2 = str.replaceAll(/hi/ig,"By")
+        document.write('<br> Replace All is '+str2)
+    </script>
+</body>
+</html>

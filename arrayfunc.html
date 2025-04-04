@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [10,20,30,40,50,20]
+        //array copy create
+        // foreach -loop - no return - cant create copy of array
+        //map - function - return -create copy of array
+        let res = arr.forEach((i,index)=>{
+                document.write('<br> index is '+index)
+                document.write('<br> i is '+i)
+                return i*2
+        })
+        document.write('<br> '+res)
+        // let res = arr.map((i,index)=>{
+        //         document.write('<br> index is '+index)
+        //         document.write('<br> i is '+i)
+        //         return i*2
+        // })
+        // document.write('<br> '+res)
+        //for..in - key value 
+        //for..of
+        for(let x of arr){
+            document.write('<br> x is '+x)
+            // document.write('<br> x is '+arr[x])           
+        }
+        //filter [10,20,30,40,50,20] searching - returns array
+        // let srch = arr.filter((i)=>{
+        //     return i==20
+        // })
+        // console.log(srch);
+        //find [10,20,30,40,50,20] searching - returns single value
+        srch = arr.find((i)=>{
+            return i==20
+        })
+        console.log(srch);
+        //includes - always return boolean true-false
+        //reduce & reduce Right
+        // [10,20,30,40,50,20]
+        let sum = arr.reduceRight((i,j)=>{ 
+            //i=10 j=20 
+            // i=30 j=30 i=60 j
+            console.log("i is "+i);
+            console.log("j is "+j);
+            return i+j
+        })
+        document.write('<br> Sum is '+sum)
+        // [10,20,30,40,50,20]
+        let maximum = arr.reduce((curr,max)=>{
+            if(curr>max){ //10>20 30>20
+                max = curr
+            }
+            return max
+        })
+        document.write('<br> Maximum is '+maximum)
+        
+    </script>
+</body>
+</html>

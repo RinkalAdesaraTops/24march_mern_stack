@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //array - collection of data
+        let a=[10,20,30,40,50]
+        // document.write('<br> '+a[0])
+        // document.write('<br> '+a[2])
+        for(let i=0;i<a.length;i++){
+            document.write('<br> '+a[i])           
+        }
+        a.push(55)
+        document.write('<br> '+a)
+        a.push(60) //last me ek element add karne ke liye
+        document.write('<br> '+a)
+        a.pop() //delete element from last position
+        document.write('<br> '+a)
+        a.unshift(100)
+        document.write('<br> '+a)
+        a.shift()
+        document.write('<br> '+a)
+        //splice = add or remove element from middle position
+        a.splice(2,0,1,2,3,4,5,6,7)
+        document.write('<br> '+a)
+        a.splice(3,2)
+        document.write('<br> '+a)
+        //slice - positionwise data get
+        let n = a.slice(4)
+        document.write('<br> '+n)
+        n = a.slice(4,9)
+        document.write('<br> '+n)
+        n = a.slice(-4)
+        document.write('<br> '+n)
+        n = a.slice(-6,-2)
+        document.write('<br> '+n)
+        //string array
+        // let arr = ["abc","trut","jklj","wert","dfsg"]
+        //numeric array
+        let arr = [34,45,32,5,6,10,100,300,78,89]
+        //32,45,34,5,6,10,100,300,78,89
+        //32-5 = 27
+        // document.write('<br> '+arr.sort())
+        document.write('<br> '+arr.sort(function(a,b){
+              return a-b  //34-45=-11 34-32=2
+        }))
+        document.write('<br> '+arr.reverse())
+        //solution -- compare function
+        
+        // let arr = [34,45,32,5,6,10,100,300,78,89]
+        //sorting == sort() reverse()
+        //includes - it returns boolean value true or false
+        document.write('<br> '+arr.includes(101)) //true false 
+        
+
+        document.write('<br> ')
+        document.write('<br> ')
+        document.write('<br> ')       
+    </script>
+</body>
+</html>

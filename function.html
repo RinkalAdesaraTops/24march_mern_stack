@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //UDF  - user defined function
+        //1)TNRN - take nothing return nothing
+        function add(){
+            let a=10
+            let b=25
+            document.write('<br> Addition is '+(a+b))           
+        }
+        //2)Take something return nothing
+        function minus(a,b=25){
+            document.write('<br> Minus is '+(a-b))    //200-100      
+        }
+        //3)Take nothing return something
+        function area(){
+            const pi = 3.14
+            let r = 200
+            return pi*r*r
+        }
+        // 4)Take something return something
+        function cube(p){
+            return p**3 //5*5*5
+            // return p*p*p
+        }
+        //function calling...
+        add()
+        minus(200,100)
+
+        // let ans = area()
+        // document.write('<br> Area of circle is '+ans)
+        // document.write('<br> Area of circle is '+ans)
+        document.write('<br> Area of circle is '+area())
+        document.write('<br> Cube is '+cube(4))
+        
+    </script>
+</body>
+</html>

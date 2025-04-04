@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 class="abc" >Hello</h3>
+    <p class="abc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo nam eos cumque eaque maiores officiis, tempora possimus eum sequi perspiciatis! Debitis ab esse obcaecati officiis suscipit ducimus non quos accusantium?</p>
+    <h4 class="abc">sjfg kjertieru etiyieurthnb</h4>
+    <script>
+        let a = document.getElementsByClassName('abc')
+        console.log(a);
+        for(let i=0;i<a.length;i++){
+            if((i+1)%2==0){
+                a[i].style.color = 'red'
+            } else {
+                a[i].style.color = 'blue'
+            }
+            
+        }
+    </script>
+</body>
+</html>
