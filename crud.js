@@ -5,13 +5,27 @@ const savedata = ()=>{
     let len = alldata!=null ? alldata.length+1 : 1
     let a = document.getElementById("name").value
     let b = document.frm.age.value
-    let obj = {
-        id:len,
-        name:a,
-        age:b
+    let id = document.frm.userid.value
+    if(id!=''){
+        //update
+        let res = alldata.map((i)=>{
+            if(i.id == id){
+                i.name = a
+                i.age = b
+            }
+            return i
+        })
+        userdata = res
+    } else {
+        //insert
+        let obj = {
+            id:len,
+            name:a,
+            age:b
+        }
+        userdata.push(obj)
     }
-    userdata.push(obj)
-    console.log(userdata);
+   
     localStorage.setItem('userdata',JSON.stringify(userdata))
     dispData()
     // document.frm.age.value = ''
@@ -29,10 +43,33 @@ const dispData = ()=>{
                 <td>${i.id}</td>
                 <td>${i.name}</td>
                 <td>${i.age}</td>
-                <td>Delete</td>
+                <td>
+                    <button onclick="editData(${i.id})">Edit</button>
+                    <button onclick="delData(${i.id})">Delete</button>
+                </td>
                 </tr>`
     })
     document.getElementById('alldata').innerHTML = tr
+}
+const delData = (id)=>{
+    let alldata = JSON.parse(localStorage.getItem('userdata'))
+    // delete a[2]
+    //1 2  4 5 - id - 3
+    let res = alldata.filter((i)=>{
+            return i.id != id
+    })
+    localStorage.setItem('userdata',JSON.stringify(res))
+    dispData()
+}
+const editData = (id)=>{
+    let alldata = JSON.parse(localStorage.getItem('userdata'))
+    //1 2  4 5 - id - 3
+    let res = alldata.find((i)=>{
+            return i.id == id
+    })
+    document.frm.name.value = res.name
+    document.frm.age.value = res.age
+    document.frm.userid.value = res.id
 }
 dispData()
 // [{}]
