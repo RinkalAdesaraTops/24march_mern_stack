@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class abc{ //parent base super
+            constructor(){
+                document.write('<br> Class abc called')               
+            }
+        }
+        class xyz extends abc{ //child derived sub
+            constructor(){
+                //super()
+                document.write('<br> Class xyz called')
+                super()              
+            }
+        }
+        let x1 = new xyz()
+    </script>
+</body>
+</html>

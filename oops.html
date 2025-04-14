@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object oriented programming language
+        /*
+        class & object - constructor - 1)Default 2)Paramerized
+        inheritance
+        polymorphism
+        data abstraction & Encapsulation
+        */
+       class abc{
+
+            // constructor(){ //function - special member function
+            //     //it isautomatically called when object is created
+            //     document.write('<br> Default constructor called')              
+            // }
+            constructor(p,q){
+                document.write('<br> Addition is '+(p+q))            
+            }
+            add(){ //normal function
+                document.write('<br> Add function called..')              
+            }
+            minus(a,b){
+                document.write('<br> Minus is '+(a-b))              
+            }
+       }
+    //    const a1 = new abc()
+    //class - collection of data & functions
+    //object = run time entity
+       const a1 = new abc(125,5)
+       a1.add();
+       a1.minus(100,20);
+    </script>
+</body>
+</html>

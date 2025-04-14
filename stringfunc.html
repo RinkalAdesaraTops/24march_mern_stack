@@ -13,11 +13,13 @@
         document.write('<br> Lowercase is '+str.toLowerCase())
         let str2 = str.concat(" TEST"," djggiur","uytt")
         document.write('<br> Merge is '+str2)
-        str2 = str.slice(4,8)
+        // let str = "Hi hello how are hi you hi?"
+        str2 = str.slice(4,8) // ello
         document.write('<br> Slice is '+str2)
-        str2 = str.substr(4,8)
+        str2 = str.substr(4,8) //ello how
         document.write('<br> Substr is '+str2)
         // str2 = str.replace("hI","By") 
+        //global i insensitive
         str2 = str.replace(/hi/gi,"By") 
         //case sensitive  at a time single word replace
         document.write('<br> Replace is '+str2)

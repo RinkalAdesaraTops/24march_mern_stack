@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        // localStorage.setItem('username',"test123")
+        // [ { }]
+        localStorage.setItem('age',25)
+        let a = localStorage.getItem('username')
+        document.getElementById('demo').innerHTML = "Name is "+a
+        localStorage.removeItem('username')
+        localStorage.clear()
+    </script>
+</body>
+</html>
