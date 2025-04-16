@@ -7,9 +7,20 @@
 </head>
 <body>
     <script>
+        //function name same,argument same but in parent & child class
+        //function overriding - polymorphism
+        //one name multiple form
         class abc{ //parent base super
             constructor(){
                 document.write('<br> Class abc called')               
+            }
+            cube(a){
+                document.write('<br> Cube is '+(a**3))    
+                //2 * 3 = 6
+                //2*2*2=8        
+            }
+            disp(){
+                document.write('<br> ABC disp func called.')             
             }
         }
         class xyz extends abc{ //child derived sub
@@ -18,8 +29,18 @@
                 document.write('<br> Class xyz called')
                 super()              
             }
+            multiply(a,b){
+                document.write('<br> Multiplication is '+(a*b))
+            }
+            disp(){                
+                document.write('<br> XYZ disp func called.')
+                super.disp()
+            }
         }
         let x1 = new xyz()
+        x1.multiply(10,5)
+        x1.cube(5)
+        x1.disp()
     </script>
 </body>
 </html>

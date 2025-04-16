@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // exception handling - try catch & finally 
+        //error - 2 types -- system  user generated
+        try{
+            //error generate a/b 34/0
+            let age = 12
+            if(age<18){
+                throw "Not eligible for vote"
+            } else {
+                document.write('<br> Eligible')               
+            }
+        } catch(a){
+            document.write('<br> Error is '+a)           
+        }
+        finally{
+            document.write('<br> Always excuted..')
+            
+        }
+    </script>
+</body>
+</html>

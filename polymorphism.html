@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class A{
+            constructor(){
+                document.write('<br> A class called.')    
+            }
+            dispName(str){
+                document.write('<br> Your name is '+str)          
+            }
+            cube(a){
+                document.write('<br> Cube is '+(a**3))           
+            }
+        }
+        class B extends A{
+            constructor(){
+               super() 
+               document.write('<br> B class called.')
+            }
+            dispName(str){
+                super.dispName("Test")
+                document.write('<br> Your surname is '+str)          
+            }
+            area(a,b){
+                super.cube(a)
+                document.write('<br> Multiply is '+(a*b))   
+            }
+        }
+        let obj = new B()
+        obj.dispName("ABCD")
+        obj.area(10,5)
+        //data or information hiding - data abstraction
+        //encapsulation --- wrapping up of data into single unit
+    </script>
+</body>
+</html>
