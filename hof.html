@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // high order function
+        //as a argument another func pass
+        //even or odd no logic
+        const isEven = (n)=>{
+            return n%2==0
+        }
+        const Hof = (func,a)=>{ //isEven,12
+            let ans = func(a) //isEven(25)
+            if(ans){
+                document.write('<br> It is even no')               
+            } else {
+                document.write('<br> It is odd no')
+            }
+        }
+        Hof(isEven,12)
+
+        //callback hell-- async-await promises func
+    </script>
+</body>
+</html>
