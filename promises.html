@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const add = async()=>{
+        //     let data = await fetch('')
+        // }
+        //pending
+        //fullfilled
+        //rejected
+        let pr = new Promise((rs,rj)=>{
+            rj("Error found")
+            rs("Successfully done")
+            
+        }).then((res)=>console.log(res))
+        .catch((msg)=>console.log("Error message "+msg))
+        pr = new Promise((res,rej)=>{
+            let age = 10
+            if(age>=18){
+                res("Eligible for vote")
+            } else {
+                rej("Not eligible for vote")
+            }
+        })
+        .then((rs)=>console.log(rs))
+        .catch((msg)=>console.log("Error message "+msg))
+    </script>
+</body>
+</html>
