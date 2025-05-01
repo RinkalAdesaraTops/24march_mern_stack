@@ -14,11 +14,11 @@ function App() {
       {/* <h3>My First React Project</h3>
       <h4>A is -- {a}</h4>
       <h4>Name is -- {name}</h4>
-      <h4>Addition is -- {2+4}</h4>
-      <MyFirstComponent myname={name} myage={age} /> */}
+      <h4>Addition is -- {2+4}</h4>*/}
+      <MyFirstComponent myname={name} myage={age} /> 
       {/* <StateExample /> */}
       {/* <BootstrapExample /> */}
-      <MaterialUIExample />
+      {/* <MaterialUIExample /> */}
     </div>
   );
 }
