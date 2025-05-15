@@ -7,6 +7,7 @@ import LifecycleFunction from './LifecycleFunction'
 import UseRefExample from './UseRefExample'
 import ContextExample from './ContextExample'
 import UseContext from './UseContext'
+import UserCrud from './UserCrud'
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         {/* <LifecycleFunction name="Rinkal"/> */}
         {/* <UseRefExample /> */}
         {/* <ContextExample /> */}
-        <UseContext />
+        {/* <UseContext /> */}
+        <UserCrud />
       </div>
     </>
   )
