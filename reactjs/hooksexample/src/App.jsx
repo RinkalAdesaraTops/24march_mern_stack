@@ -7,7 +7,7 @@ import LifecycleFunction from './LifecycleFunction'
 import UseRefExample from './UseRefExample'
 import ContextExample from './ContextExample'
 import UseContext from './UseContext'
-import UserCrud from './UserCrud'
+import EmpCrud from './EmpCrud'
 
 function App() {
   return (
@@ -18,7 +18,8 @@ function App() {
         {/* <UseRefExample /> */}
         {/* <ContextExample /> */}
         {/* <UseContext /> */}
-        <UserCrud />
+        {/* <UserCrud /> */}
+        <EmpCrud />
       </div>
     </>
   )
