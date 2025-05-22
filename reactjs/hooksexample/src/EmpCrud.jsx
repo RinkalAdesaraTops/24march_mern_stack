@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import Display from "./Display";
 
 const EmpCrud = () => {
+     console.log('emp crud called..')
     const [data, setData] = useState({
         name: "",
         age: ""
@@ -16,7 +18,7 @@ const EmpCrud = () => {
             [name]:value
         })
     }
-    const saveData = (e)=>{
+    const saveData = useCallback((e)=>{
         e.preventDefault()
         if(id!=''){
             let res = alldata.map((i,index)=>{
@@ -38,7 +40,7 @@ const EmpCrud = () => {
             name:'',
             age:''
         })
-    }
+    })
     const delData = (id)=>{
         let res = alldata.filter((i,index)=>{
                 return index != id
@@ -53,6 +55,8 @@ const EmpCrud = () => {
         setId(id)
     }
   return (
+   
+    
     <div>
       <h3>Employee Crud Example</h3>
 
@@ -68,29 +72,7 @@ const EmpCrud = () => {
             <button type="submit">Save</button>
         </form>
         <br /><br />
-        <table>
-            <tr>
-                <td>Id</td>
-                <td>Name</td>
-                <td>Age</td>
-                <td>Action</td>
-            </tr>
-            {
-                alldata.map((i,index)=>{
-                    return(
-                        <tr>
-                            <td>{index+1}</td>
-                            <td>{i.name}</td>
-                            <td>{i.age}</td>
-                            <td>
-                                <button onClick={()=>editData(index)}>Edit</button>
-                                <button onClick={()=>delData(index)}>Delete</button>
-                            </td>
-                        </tr>
-                    )
-                })
-            }
-        </table>
+        <Display alldata={alldata}/>
     </div>
   )
 }

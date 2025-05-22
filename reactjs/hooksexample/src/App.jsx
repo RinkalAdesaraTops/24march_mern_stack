@@ -8,6 +8,7 @@ import UseRefExample from './UseRefExample'
 import ContextExample from './ContextExample'
 import UseContext from './UseContext'
 import EmpCrud from './EmpCrud'
+import UsememoExample from './UsememoExample'
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         {/* <ContextExample /> */}
         {/* <UseContext /> */}
         {/* <UserCrud /> */}
-        <EmpCrud />
+        {/* <EmpCrud /> */}
+        <UsememoExample />
       </div>
     </>
   )
