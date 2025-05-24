@@ -26,10 +26,12 @@ const disp = ()=>{
     const handleSubmit = (e) => {
         e.preventDefault()
         if(id){
-            const updateData = allData.map((v) => {
-                return id === v.id ? data : v
-            })
-            setAllData(updateData)
+             axios.put("http://localhost:3000/users/"+id,data)
+            .then(()=>console.log("update..."))
+            // const updateData = allData.map((v) => {
+            //     return id === v.id ? data : v
+            // })
+            // setAllData(updateData)
         }else{  
             axios.post("http://localhost:3000/users",data)
             .then(()=>console.log("Inserted..."))
@@ -42,10 +44,11 @@ const disp = ()=>{
         disp()
     }
     const handleEdit = (id) => {
-        const getData = allData.find((v) => {
-            return id === v.id
-        })
-        setData(getData)
+        axios.patch("http://localhost:3000/users/"+id)
+            .then((res)=>setData(res.data))
+        // const getData = allData.find((v) => {
+        //     return id === v.id
+        // })
         setId(id)
     }
 
