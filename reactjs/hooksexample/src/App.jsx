@@ -9,6 +9,8 @@ import ContextExample from './ContextExample'
 import UseContext from './UseContext'
 import EmpCrud from './EmpCrud'
 import UsememoExample from './UsememoExample'
+import Apiexample from './Apiexample'
+import Apicrud from './Apicrud'
 
 function App() {
   return (
@@ -21,7 +23,9 @@ function App() {
         {/* <UseContext /> */}
         {/* <UserCrud /> */}
         {/* <EmpCrud /> */}
-        <UsememoExample />
+        {/* <UsememoExample /> */}
+        {/* <Apiexample /> */}
+        <Apicrud/>
       </div>
     </>
   )
