@@ -3,8 +3,7 @@ import React from 'react'
 const Home = () => {
   return (
     <>
-       
-        {/* Navbar */}
+    {/* Navbar */}
         <div className="container-fluid fixed-top">
             <div className="container topbar bg-primary d-none d-lg-block">
                 <div className="d-flex justify-content-between">
