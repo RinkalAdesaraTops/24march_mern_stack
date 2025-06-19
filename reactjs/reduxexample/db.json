@@ -21,5 +21,31 @@
             "name":"Dairy Products"
         }
 
-   ] 
+   ],
+   "products" :[
+    {
+        "pid":1,
+        "cid":1,
+        "pname":"Abc",
+        "price":456,
+        "description":"lorem sdjfh skjdhksj",
+        "pimage":"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+    },
+    {
+        "pid":2,
+        "cid":1,
+        "pname":"xyz",
+        "price":780,
+        "description":"lorem sdftgersdjfh skjdhksj",
+        "pimage":"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+    },
+    {
+        "pid":2,
+        "cid":2,
+        "pname":"fghyuyu",
+        "price":1000,
+        "description":"lorem fhjsdftgersdjfh skjdhksj",
+        "pimage":"https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+    }
+   ]
 }
