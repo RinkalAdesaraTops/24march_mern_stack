@@ -28,7 +28,7 @@ const ReduxCrudComponent = () => {
 
         setId('')
         setData({
-             name:"",
+            name:"",
             age:"",
             salary:""
         })
