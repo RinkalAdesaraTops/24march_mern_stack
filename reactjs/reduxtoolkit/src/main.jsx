@@ -8,7 +8,7 @@ import CounterStore from './RTK/CounterStore.js'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={CounterStore}>
-    <App />
+      <App />
     </Provider>
   </React.StrictMode>,
 )
