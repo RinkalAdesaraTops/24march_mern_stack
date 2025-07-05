@@ -4,6 +4,7 @@ import MyFirstComponent from './MyFirstComponent';
 import StateExample from './StateExample';
 import BootstrapExample from './BootstrapExample';
 import MaterialUIExample from './MaterialUIExample';
+import FirebaseExample from './FirebaseExample';
 
 function App() {
   let a=10
@@ -15,10 +16,11 @@ function App() {
       <h4>A is -- {a}</h4>
       <h4>Name is -- {name}</h4>
       <h4>Addition is -- {2+4}</h4>*/}
-      <MyFirstComponent myname={name} myage={age} /> 
+      {/* <MyFirstComponent myname={name} myage={age} />  */}
       {/* <StateExample /> */}
       {/* <BootstrapExample /> */}
       {/* <MaterialUIExample /> */}
+      <FirebaseExample />
     </div>
   );
 }
